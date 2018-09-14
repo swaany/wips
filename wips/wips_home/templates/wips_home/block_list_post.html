@@ -1,0 +1,27 @@
+{% extends 'wips_home/base.html' %} 
+ 
+ 
+ {% block content %} 
+ 	<div> 
+ 		<p>mac: {{ BlockLog.mac }}</p> 
+ 		<p>number: {{ BlockLog.number }}</p> 
+ 		<p>block_pkt: {{ BlockLog.block_pkt }}</p> 
+ 		<p>atk_type: {{ BlockLog.atk_type }}</p> 
+ 		<p>pkt_time: {{ BlockLog.pkt_time }}</p> 
+ 		<p>block_stat: {{ BlockLog.block_stat }}</p> 
+ 		<!--<button type="submit" >Save</button> --> 
+ 
+ 
+ 		<form method="POST"> 
+ 	    	{%csrf_token%}  <!-- 보안이슈로 입력 --> 
+ 	    	{{form.as_p}} 
+ 			<button type="submit" value ="True">Save</button> 
+ 		</form> 
+ 
+ 
+ 
+
+ 	</div> 
+ 
+ 
+ {% endblock %} 
